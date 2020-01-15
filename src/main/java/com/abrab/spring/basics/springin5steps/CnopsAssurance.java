@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 //@Primary
+@Qualifier("cnops")
 public class CnopsAssurance implements Assurance {
 
     public double getCouvertureMontant(double visitAmount) {
