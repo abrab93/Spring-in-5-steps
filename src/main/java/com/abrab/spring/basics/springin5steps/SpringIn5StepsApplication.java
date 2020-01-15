@@ -11,7 +11,11 @@ public class SpringIn5StepsApplication {
 
         ConfigurableApplicationContext applicationContext = SpringApplication.run(SpringIn5StepsApplication.class, args);
         PrestationImpl assurance = applicationContext.getBean(PrestationImpl.class);
+        PrestationImpl assurance2 = applicationContext.getBean(PrestationImpl.class);
+        System.out.println(assurance);
+        System.out.println(assurance2);
         double result = assurance.assuranceMaladieObligatoire(100);
+        result = assurance2.assuranceMaladieObligatoire(100);
         System.out.println(result);
     }
 
