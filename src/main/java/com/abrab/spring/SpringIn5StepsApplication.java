@@ -1,18 +1,18 @@
 package com.abrab.spring;
 
 import com.abrab.spring.basics.PrestationImpl;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.ComponentScans;
+import org.springframework.context.annotation.Configuration;
 
-@SpringBootApplication
+@Configuration
+@ComponentScan
 public class SpringIn5StepsApplication {
 
     public static void main(String[] args) {
 
-        ConfigurableApplicationContext applicationContext = SpringApplication.run(SpringIn5StepsApplication.class, args);
+        ConfigurableApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringIn5StepsApplication.class);
         PrestationImpl assurance = applicationContext.getBean(PrestationImpl.class);
         PrestationImpl assurance2 = applicationContext.getBean(PrestationImpl.class);
         System.out.println(assurance);

@@ -1,21 +1,22 @@
 package com.abrab.spring;
 
-import com.abrab.spring.basics.PrestationImpl;
 import com.abrab.spring.cdi.SomeCdiBusiness;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
-@SpringBootApplication
+@Configuration
+@ComponentScan
 public class SpringIn5StepsCDIApplication {
 
     private static Logger LOGGER = LoggerFactory.getLogger(SpringIn5StepsScopeApplication.class);
 
     public static void main(String[] args) {
 
-        ConfigurableApplicationContext applicationContext = SpringApplication.run(SpringIn5StepsCDIApplication.class, args);
+        ConfigurableApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringIn5StepsCDIApplication.class);
 
         SomeCdiBusiness someCdiBusiness = applicationContext.getBean(SomeCdiBusiness.class);
 
