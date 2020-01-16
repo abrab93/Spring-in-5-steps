@@ -1,6 +1,6 @@
 package com.abrab.spring;
 
-import com.abrab.componentscan.PersonDao;
+import com.abrab.componentscan.ComponentPersonDao;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -17,14 +17,14 @@ public class SpringIn5StepsComponentScanApplication {
     public static void main(String[] args) {
 
         ConfigurableApplicationContext applicationContext = SpringApplication.run(SpringIn5StepsComponentScanApplication.class, args);
-        PersonDao personDao = applicationContext.getBean(PersonDao.class);
-        PersonDao personDao2 = applicationContext.getBean(PersonDao.class);
+        ComponentPersonDao componentPersonDao = applicationContext.getBean(ComponentPersonDao.class);
+        ComponentPersonDao componentPersonDao2 = applicationContext.getBean(ComponentPersonDao.class);
 
-        LOGGER.info("{}", personDao);
-        LOGGER.info("{}", personDao.getJdbcConnector());
+        LOGGER.info("{}", componentPersonDao);
+        LOGGER.info("{}", componentPersonDao.getComponentJdbcConnector());
 
-        LOGGER.info("{}", personDao2);
-        LOGGER.info("{}", personDao2.getJdbcConnector());
+        LOGGER.info("{}", componentPersonDao2);
+        LOGGER.info("{}", componentPersonDao2.getComponentJdbcConnector());
 
     }
 
