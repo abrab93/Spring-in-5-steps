@@ -1,4 +1,4 @@
-package com.abrab.spring.basics.springin5steps;
+package com.abrab.spring.basics;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

@@ -1,5 +1,6 @@
-package com.abrab.spring.basics.springin5steps;
+package com.abrab.spring;
 
+import com.abrab.spring.basics.PrestationImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;

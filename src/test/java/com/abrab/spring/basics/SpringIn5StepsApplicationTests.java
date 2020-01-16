@@ -1,4 +1,4 @@
-package com.abrab.spring.basics.springin5steps;
+package com.abrab.spring.basics;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
