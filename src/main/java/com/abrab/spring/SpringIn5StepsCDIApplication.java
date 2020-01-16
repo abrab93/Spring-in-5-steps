@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan
 public class SpringIn5StepsCDIApplication {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(SpringIn5StepsScopeApplication.class);
+    private static Logger logger = LoggerFactory.getLogger(SpringIn5StepsCDIApplication.class);
 
     public static void main(String[] args) {
 
@@ -20,7 +20,7 @@ public class SpringIn5StepsCDIApplication {
 
         SomeCdiBusiness someCdiBusiness = applicationContext.getBean(SomeCdiBusiness.class);
 
-        LOGGER.info("{}", someCdiBusiness);
+        logger.info("{}", someCdiBusiness);
 
     }
 
