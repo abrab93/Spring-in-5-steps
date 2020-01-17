@@ -9,7 +9,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@ContextConfiguration(locations = "/applicationContext.xml")//Load the context
+@ContextConfiguration(locations = "/testContext.xml")//Load the context
 @ExtendWith(SpringExtension.class)
 //to run test with spring
 class PrestationXmlConfigurationTest {
