@@ -27,5 +27,4 @@ public class SpringIn5StepsApplication {
             // or use applicationContext.close(); rather than resource try
         }
     }
-
 }
